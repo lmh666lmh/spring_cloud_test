@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.user.dao.IUserDao">
+    
+    <!--<resultMap id="userResult" type="springmvc.domain.User">-->
+        <!--<id property="id" column="id" javaType="String"/>-->
+        <!--<result property="pass" column="pass" javaType="String"/>-->
+        <!--<result property="type" column="type" javaType="int"/>-->
+        <!--<result property="uname" column="uname" javaType="String"/>-->
+    <!--</resultMap>-->
+
+    <select id="findUserById" resultType="test.user.domain.User" parameterType="String" >
+        SELECT * FROM USER WHERE id = #{id};
+    </select>
+
+</mapper>
