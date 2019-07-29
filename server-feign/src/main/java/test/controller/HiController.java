@@ -15,6 +15,8 @@ public class HiController {
 
     @GetMapping(value = "/hi")
     public String sayHi(@RequestParam String name) {
-        return schedualServiceHi.sayHiFromClientOne( name );
+        String str = schedualServiceHi.sayHiFromClientOne(name);
+        System.out.println("返回--->>"+str);//返回--->>hello hahahaha ,I am from port:8763
+        return str;
     }
 }
